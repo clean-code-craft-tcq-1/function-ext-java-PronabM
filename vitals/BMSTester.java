@@ -24,7 +24,7 @@ public class BMSTester {
 		this.minTemp = bms.getValidator(TEMP).getLowerLimit();
 		this.tempTolerance = bms.getValidator(TEMP).getTolerance();
 		this.maxSoc  = bms.getValidator(SOC).getUpperLimit();
-		this.minSoc  = bms.getValidator(SOC).getUpperLimit();
+		this.minSoc  = bms.getValidator(SOC).getLowerLimit();
 		this.socTolerance = bms.getValidator(SOC).getTolerance();
 		this.maxCR   = bms.getValidator(CR).getUpperLimit();
 		this.crTolerance = bms.getValidator(CR).getTolerance();
