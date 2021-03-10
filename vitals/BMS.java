@@ -20,7 +20,7 @@ public class BMS {
 	public boolean checkBattery(Map<MonitorParams, Float> params){
 		boolean status = true;
 		for(Map.Entry<MonitorParams, Validator> validator: validators.entrySet())
-			status = status && checkInRange(validator.getKey(),params.get(validator.getKey()),validator.getValue(), language);
+			status = checkInRange(validator.getKey(),params.get(validator.getKey()),validator.getValue(), language) && status;
 		print(separator);
 		return status;
 	}

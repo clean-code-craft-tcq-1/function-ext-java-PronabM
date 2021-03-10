@@ -19,7 +19,7 @@ public interface BMSChecker {
 			print(WARNING.toString(language) + param.toString(language) + IS_IN_UPPER_WARNING.toString(language));
 			return;
 		}
-		print(param.toString(language) + IS_WITHIN_LIMIT.toString(language));
+		print(SUCCESS.toString(language) + param.toString(language) + IS_WITHIN_LIMIT.toString(language));
 	}
 	
 	static Boolean checkInRange(MonitorParams param, float value,Validator validator, int language) {

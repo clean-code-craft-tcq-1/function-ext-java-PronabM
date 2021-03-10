@@ -1,6 +1,7 @@
 package vitals;
 
 public enum MonitorStates {
+	SUCCESS("SUCCESS:: ", "ERFOLG:: "),
 	WARNING("WARNING:: ", "WARNUNG:: "),
 	BREACH("BREACH:: ", "BRUCH:: "),
 	IS_ABOVE_ALLOWED_LIMIT(" is above the allowed limit.", " liegt uber dem zulassigen Grenzwert."),

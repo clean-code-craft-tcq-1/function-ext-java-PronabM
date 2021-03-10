@@ -11,8 +11,8 @@ public class Validator {
 		this.upperLimit = upperLimit;
 		this.lowerLimit = lowerLimit;
 		this.tolerance = (upperLimit * tolerance)/100;
-		this.upperWarning = upperLimit - tolerance;
-		this.lowerWarning = lowerLimit + tolerance;
+		this.upperWarning = upperLimit - this.tolerance;
+		this.lowerWarning = lowerLimit + this.tolerance;
 	}
 
 	public float getUpperLimit() {
