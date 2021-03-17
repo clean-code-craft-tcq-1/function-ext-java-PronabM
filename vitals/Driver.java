@@ -1,10 +1,14 @@
 package vitals;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
+
+import vitals.logger.ConsoleLogger;
+
 import static vitals.MonitorParams.*;
 
-public class BMSDriver {
+public class Driver {
 	
 	static final int LANG_EN = 0;
 	static final int LANG_DE = 1;
@@ -14,7 +18,10 @@ public class BMSDriver {
 		validators.put(TEMP, new Validator(45, 0, 5));
 		validators.put(SOC, new Validator(80, 20, 5));
 		validators.put(CR, new Validator(0.8f, Float.MIN_VALUE, 5));
-		BMSTester tester = new BMSTester(new BMS(validators,LANG_DE));
+		Tester tester = new Tester(new BatteryManagementSystem(validators,
+								   new ConsoleLogger(),
+								   Locale.GERMAN));
+		
 		tester.tempAboveLimit_Failure();
 		tester.tempBelowLimit_Failure();
 		tester.tempWithinLimit_Success();

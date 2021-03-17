@@ -6,6 +6,7 @@ public class Validator {
 	private float tolerance = 5;
 	private float upperWarning;
 	private float lowerWarning;
+	private String message;
 
 	public Validator(float upperLimit, float lowerLimit, float tolerance) {
 		this.upperLimit = upperLimit;
@@ -33,5 +34,13 @@ public class Validator {
 
 	public float getLowerWarning() {
 		return lowerWarning;
+	}
+	
+	public String getMessage() {
+		return message;
+	}
+	
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }

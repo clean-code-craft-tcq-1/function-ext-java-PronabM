@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Random;
 import static vitals.MonitorParams.*;
 
-public class BMSTester {
+public class Tester {
 	
-	private BMS bms;
+	private BatteryManagementSystem bms;
 	private float maxTemp;
 	private float minTemp;
 	private float tempTolerance;
@@ -18,7 +18,7 @@ public class BMSTester {
 	private float crTolerance;
 	private Random random = new Random();
 	
-	public BMSTester(BMS bms) {
+	public Tester(BatteryManagementSystem bms) {
 		this.bms = bms;
 		this.maxTemp = bms.getValidator(TEMP).getUpperLimit();
 		this.minTemp = bms.getValidator(TEMP).getLowerLimit();
